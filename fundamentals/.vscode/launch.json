@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ListOfExceptionsTest",
+            "request": "launch",
+            "mainClass": "ListOfExceptionsTest"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BasicJavaTest",
+            "request": "launch",
+            "mainClass": "BasicJavaTest"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BasicArraysTest",
+            "request": "launch",
+            "mainClass": "BasicArraysTest"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - StringManipulatorTest",
+            "request": "launch",
+            "mainClass": "StringManipulatorTest"
+        }
+    ]
+}

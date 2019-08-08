@@ -2520,3 +2520,18 @@ java.lang.InterruptedException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-07 23:04:12.170
 !MESSAGE executing callback sts4.classpath.zyjoKNZh SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-07 23:12:33.727
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.zyjoKNZh
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-07 23:12:33.728
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.zyjoKNZh
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-07 23:12:33.728
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-08-07 23:12:33.728
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.zyjoKNZh => OK
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-08-07 23:12:35.418
+!MESSAGE The workspace will exit with unsaved changes in this session.

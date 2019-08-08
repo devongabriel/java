@@ -16,7 +16,8 @@ public class Calculator {
 			} else if (this.operation.equals("-")) {
 				this.result = operandOne - operandTwo;
 				return this.result;
-			} else {							// will error out if not "+" or "-"
+				// errors out if not "+" or "-"
+			} else {							
 				this.result = 000.00;
 				return this.result;
 			}		

@@ -14,6 +14,17 @@ public class HumanTest {
 		Shawn.heal(Shawn);
 		
 		
+		Wizard Alex = new Wizard();
+		Samurai Kaysee = new Samurai();
+		Samurai Jack = new Samurai();
+		Ninja Cameron = new Ninja();
+		
+		Alex.fireball(Kaysee);
+		Alex.heal(Jack);
+		Kaysee.deathBlow(Jack);
+		Cameron.steal(Jack);
+		Cameron.runAway(Alex);
+		
 	}
 
 }

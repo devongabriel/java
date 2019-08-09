@@ -13,14 +13,33 @@ public class Home extends HttpServlet {
     private static final long serialVersionUID = 1L;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // get the value for the query parameter
-        String userName = request.getParameter("name");
+    	String firstName = request.getParameter("firstName");
+    	if(firstName == null) {
+    		firstName = "unknown";
+    	}
+    	
+    	
+        String lastName = request.getParameter("lastName");
+        if(lastName == null) {
+    		lastName = "unknown";
+    	}
         String language = request.getParameter("language");
-        String hometown = request.getParameter("hometown");
+        
+        if(language == null) {
+    		language = "unknown";
+    	}
+        String home = request.getParameter("home");
+        if(home == null) {
+    		home = "unknown";
+    	}
+        
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        out.write("<h1>Hello World, from " + userName + "</h1>");
-        out.write("<h1>Hello World, from " + language + "</h1>");
-        out.write("<h1>Hello World, from " + hometown + "</h1>");
+        
+        
+        out.write("<h1>Welcome " + firstName +" "+lastName + "</h1>");
+        out.write("<h1>Your favorite language is " + language + "</h1>");
+        out.write("<h1>Your hometown is " + home + "</h1>");
     }
 //...
 }

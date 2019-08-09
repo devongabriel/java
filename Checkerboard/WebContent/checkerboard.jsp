@@ -41,9 +41,9 @@
 	
 	<td class="border border-dark pt-5 pl-5 pr-5 pb-5 color<%= (i+j)%2+1 %>"></td>
 	
-	<% } %>	
-	
-	</tr>	
+	<% } %>
+
+		</tr>	
 															
 	<% } %>
 </table>

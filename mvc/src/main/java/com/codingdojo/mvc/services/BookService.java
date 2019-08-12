@@ -37,19 +37,20 @@ public class BookService {
     }
     
     // edits a book
-    public Book updateBook(Book b) {
-    	return bookRepository.save(b);
+    public Book updateBook(Book book) {
+    	return bookRepository.save(book);
     }
     
     public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
-    	Optional <Book> temp = bookRepository.findById(id);
-    	if(temp != null) {
-    		temp.get().setTitle(title);
-    		temp.get().setDescription(desc);
-    		temp.get().setLanguage(lang);
-    		temp.get().setNumberOfPages(numOfPages);
-
-    		return temp.get();
+    	Optional <Book> book = bookRepository.findById(id);
+    	
+    	if(book.isPresent()) {
+    		Book update = book.get();
+    		update.setTitle(title);
+    		update.setDescription(desc);
+    		update.setLanguage(lang);
+    		update.setNumberOfPages(numOfPages);
+    		return bookRepository.save(update);
     	}
     	return null;        
     }

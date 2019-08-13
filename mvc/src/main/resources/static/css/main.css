@@ -11,3 +11,7 @@ body {
 row{
 	background-color: #949494;
 }
+
+.master-container{
+	margin: 25px;
+}

@@ -14,11 +14,7 @@
 <div class="row-wrap">
 </div>
 <div class="container">
-
-</div>
-</div>
-
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
+	<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
 <h1>All Books</h1>
 <table>
     <thead>
@@ -41,6 +37,10 @@
     </tbody>
 </table>
 <a class ="waves-effect waves-light btn-small" href="/books/new">New Book</a>
+</div>
+</div>
+
+
 
 
 </body>

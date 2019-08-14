@@ -55,7 +55,7 @@ public class LanguageController {
 		return "languages/edit.jsp";
 	}
 	
-	@PutMapping("/languages/{id}")
+	@PostMapping("/languages/{id}")
 	public String updateLanguage(@Valid @ModelAttribute("editLanguageObject") Language language, BindingResult results) {
 		if (results.hasErrors()) {
 			return "languages/edit.jsp";
@@ -64,8 +64,8 @@ public class LanguageController {
 		languageService.createOrUpdateLanguage(language);
 		return "redirect:/";
 	}
-	@PostMapping("/languages/{id}")
-	public String destroy(@PathVariable("id") Long id) {
+	@GetMapping("/languages/{language_id}/delete")
+	public String destroy(@PathVariable("language_id") Long id) {
 		languageService.deleteLanguage(id);
 		return "redirect:/";
 	}

@@ -19,7 +19,6 @@
 
 <div class="container">
 	<form:form action="/languages/${editLanguageObject.id}" method="post" modelAttribute="editLanguageObject">
-		<input type="hidden" name="_method" value="put">
 	<p>
         <form:label path="name">Name</form:label>
         <form:errors path="name"/>

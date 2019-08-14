@@ -49,7 +49,7 @@ public class LanguageController {
 		return "languages/show.jsp";
 	}
 	@GetMapping("/languages/{language_id}/update")
-	public String editLanguage(Model model, @PathVariable("language_id") Long id) {
+	public String editLanguage(@PathVariable("language_id") Long id, Model model) {
 		Language language = languageService.getOneLanguage(id);
 		model.addAttribute("editLanguageObject", language);
 		return "languages/edit.jsp";
@@ -62,6 +62,11 @@ public class LanguageController {
 		}
 		
 		languageService.createOrUpdateLanguage(language);
+		return "redirect:/";
+	}
+	@PostMapping("/languages/{id}")
+	public String destroy(@PathVariable("id") Long id) {
+		languageService.deleteLanguage(id);
 		return "redirect:/";
 	}
 }

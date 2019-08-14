@@ -37,8 +37,8 @@
             <td>
             <a href="/languages/${language.id}/show">Show</a>
             | <a href="/languages/${language.id}/update">Update</a>
-            <form style="display: inline-block" action="/languages/${language.id}/delete" method="post">
-            	<input type="hidden" name="_method" value="Delete" />
+            <form style="display: inline-block" action="/languages/${language.id}" method="post">
+            	<input type="hidden" name="_method" value="delete" />
             	<input type="submit" value="Delete" />
             </form>
             </td>

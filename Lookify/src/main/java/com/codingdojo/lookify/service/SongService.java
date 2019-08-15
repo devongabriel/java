@@ -47,4 +47,8 @@ public class SongService {
 		return songRepository.findTop10ByOrderByRatingDesc();
 	}
 	
+	public void deleteSong(Long id) {
+		songRepository.deleteById(id);
+	}
+	
 }

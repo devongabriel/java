@@ -1,0 +1,11 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.row-wrap {
+	position: relative;
+	margin: 50px;
+	font-family: Helvetica, Arial, San-Serif;
+	font-weight: lighter;
+}

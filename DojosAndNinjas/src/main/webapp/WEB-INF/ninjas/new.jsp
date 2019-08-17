@@ -31,17 +31,41 @@
 <body>
 <div class="master-container">
 <div class="row-wrap">
-<h4><c:out value="${license.person.first_name} ${license.person.last_name}"/>'s License</h4>
+<h6>Dojo's and Ninja's</h6>
+<p class="anchor-links"><a href="/dojos/new">Create Dojo</a></p>
+<p class="anchor-links"><a href="/dojos/${id}">View Ninjas By Location</a></p>
+
 <hr>
 </div>
 
 <div class="container">
-	<div id="panel">
-		<h1><c:out value="${license.person.first_name} ${license.person.last_name}"/></h1>
-		<h2>License Number: <c:out value="${license.number}"/></h2>
-		<h2>State: <c:out value="${license.state}"/></h2>
-		<h2>Expiration Date: <c:out value ="${license.expiration_date}" /></h2>
-	</div>
+ 	<p>
+ 		<form:errors path="newNinjaObject.*" class="alert alert-danger"></form:errors>
+ 	<p>
+	<form:form action="/ninjas/new" method="post" modelAttribute="newNinjaObject" >
+		<p>
+			<form:select path="dojo">
+				<c:forEach items="${Dojos}" var="dojo">
+					<form:option value="${dojo.id}">
+						<c:out value="${dojo.name}" />
+					</form:option>
+				</c:forEach>
+			</form:select>
+		</p>
+		<p>
+			<form:label path="firstName">First Name</form:label>
+			<form:input path="firstName" class="form-control col-6 mb-2" />
+		</p>
+		<p>
+			<form:label path="lastName">Last Name</form:label>
+			<form:input path="lastName" class="form-control col-6 mb-2" />
+		</p>
+		<p>
+			<form:label path="age">Age</form:label>
+			<form:input path="age" class="form-control col-6 mb-2" />
+		</p>
+		<input type="submit" value="create ninja" class="btn btn-success"/>
+	</form:form>
 </div>
 </div>
 

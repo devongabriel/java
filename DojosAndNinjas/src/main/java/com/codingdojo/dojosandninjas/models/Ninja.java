@@ -10,7 +10,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -29,7 +32,7 @@ public class Ninja {
     @Size(min=2, max=30, message="Last Name must contain between 2 and 30 characters")
     private String lastName;
     
-    @Size(min=1, message="Age is required")
+    @NotNull
     private int age;
     
     @Column(updatable=false)
@@ -43,9 +46,18 @@ public class Ninja {
     @JoinColumn(name="dojo_id")
     private Dojo dojo;
     
+    @PrePersist 
+    protected void onCreate(){ 
+    this.createdAt = new Date(); 
+      } 
+    @PreUpdate protected void onUpdate(){ 
+    this.updatedAt = new Date(); 
+      } 
+    
     //---------------------
     //constructors
     //---------------------
+    
     public Ninja() {
         
     }

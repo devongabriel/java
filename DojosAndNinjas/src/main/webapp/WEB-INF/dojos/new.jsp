@@ -25,23 +25,29 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 	crossorigin="anonymous"></script>
-<link type="text/css" rel="stylesheet" href="/css/main.css" >
+<link type="text/css" rel="stylesheet" href="/css/main.css">
 <title>Insert title here</title>
 </head>
 <body>
 <div class="master-container">
 <div class="row-wrap">
-<h4><c:out value="${license.person.first_name} ${license.person.last_name}"/>'s License</h4>
+<h6>Dojo's and Ninja's</h6>
+<p class="anchor-links"><a href="/ninjas/new">Create Ninja</a></p>
 <hr>
 </div>
 
 <div class="container">
-	<div id="panel">
-		<h1><c:out value="${license.person.first_name} ${license.person.last_name}"/></h1>
-		<h2>License Number: <c:out value="${license.number}"/></h2>
-		<h2>State: <c:out value="${license.state}"/></h2>
-		<h2>Expiration Date: <c:out value ="${license.expiration_date}" /></h2>
-	</div>
+<h2>Create A New Dojo</h2>
+ 	<p>
+ 		<form:errors path="newDojoObject.*" class="alert alert-danger"></form:errors>
+ 	<p>
+	<form:form action="/dojos/new" method="post" modelAttribute="newDojoObject">
+	<p>
+		<form:label path="name">Name</form:label>
+		<form:input path="name" class="form-control col-6 mb-2" />
+	</p>
+	<input type="submit" value="creat dojo" class="btn btn-success" />
+	</form:form>
 </div>
 </div>
 

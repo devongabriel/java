@@ -31,17 +31,34 @@
 <body>
 <div class="master-container">
 <div class="row-wrap">
-<h4><c:out value="${license.person.first_name} ${license.person.last_name}"/>'s License</h4>
+<h6>Dojo's and Ninja's</h6>
+<p class="anchor-links"><a href="/ninjas/new">Create Ninja</a></p>
+<p class="anchor-links"><a href="/dojos/new">Create Dojo</a></p>
 <hr>
 </div>
 
 <div class="container">
-	<div id="panel">
-		<h1><c:out value="${license.person.first_name} ${license.person.last_name}"/></h1>
-		<h2>License Number: <c:out value="${license.number}"/></h2>
-		<h2>State: <c:out value="${license.state}"/></h2>
-		<h2>Expiration Date: <c:out value ="${license.expiration_date}" /></h2>
-	</div>
+<div id="container">
+		<h1><c:out value="${dojo.name}"/>${dojo_id}'s Ninjas</h1>
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+			    	<th scope="col" class="col-names">First Name</th>
+			      	<th scope="col" class="col-names">Last Name</th>
+			      	<th scope="col" class="col-names">Age</th>
+				</tr>
+			</thead>
+			<tbody class="thead-light">
+				<c:forEach items="${dojo.ninjas}" var="ninja">
+				<tr>
+				    <td><c:out value="${ninja.firstName}"/></td>
+				    <td><c:out value="${ninja.lastName}"/></td>
+				    <td><c:out value="${ninja.age}"/></td>
+				 </tr>
+				 </c:forEach>
+			 </tbody>
+		</table>
+</div>
 </div>
 </div>
 

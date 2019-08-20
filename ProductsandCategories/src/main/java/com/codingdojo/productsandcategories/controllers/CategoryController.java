@@ -35,7 +35,7 @@ public class CategoryController {
 			return "categories/new.jsp";
 		}
 		Category cat = inventoryService.createNewCategory(category);
-		return "redirect:/category/" + cat.getId();
+		return "redirect:/products/new";
 	}
 	
 	@GetMapping("category/{id}")

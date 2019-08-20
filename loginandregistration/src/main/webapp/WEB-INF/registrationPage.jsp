@@ -26,27 +26,36 @@
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 	crossorigin="anonymous"></script>
 <link type="text/css" rel="stylesheet" href="/css/main.css" >
-<title>Insert title here</title>
+<title>Login and Registration JAVA Assignment</title>
 </head>
 <body>
-	<div class="master-container">
-		<div class="row-wrap">
-		<h6>Products and Categories</h6>
-			<hr>
-		</div>
+<div class="master-container">
+<div class="row-wrap">
+<h6>JAVA - Login and Registration</h6>
+<hr>
+</div>
 
-		<div class="container">
-		<h2>New Category</h2>
-			<p>
- 				<form:errors path="newCategoryObject.*" class="alert alert-danger"></form:errors>
- 			</p>
-				<form:form action="/category/new" method="post" modelAttribute="newCategoryObject">
-					<form:label path="name"> Name</form:label>
-					<form:input path="name" class="form-control col-6 mb-2" />
-				<input type="submit" value="create product" class="btn btn-success" />
-				</form:form>
-		</div>
-	</div>
+<div class="container">
+	<h2>Register</h2>
+	<p><form:errors path="user.*"/></p>
+    
+    <form:form method="POST" action="/registration" modelAttribute="user">
+        <p>
+            <form:label path="email">Email</form:label>
+            <form:input type="email" path="email" class="form-control col-6"/>
+        </p>
+        <p>
+            <form:label path="password">Password</form:label>
+            <form:password path="password" class="form-control col-6"/>
+        </p>
+        <p>
+            <form:label path="passwordConfirmation">Password Confirmation</form:label>
+            <form:password path="passwordConfirmation" class="form-control col-6"/>
+        </p>
+        <input type="submit" value="Register!" class="btn btn-primary"/>
+    </form:form>
+</div>
+</div>
 
 </body>
 </html>

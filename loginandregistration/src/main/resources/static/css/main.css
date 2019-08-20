@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.row-wrap h6{
+	margin: 25px;
+	display: inline-block;
+}
+.row-wrap p{
+	margin: 25px;
+	display: inline-block;
+}
+.container h2{
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+
+.alert-danger{
+	margin: 25px;
+}

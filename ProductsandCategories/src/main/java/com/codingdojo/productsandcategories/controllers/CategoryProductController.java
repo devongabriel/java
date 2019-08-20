@@ -26,6 +26,8 @@ public class CategoryProductController {
 		CategoryProduct catProduct = inventoryService.createCategoryProduct(categoryProduct);
 		return "redirect:/products/"+ catProduct.getProduct().getId();
 	}
+	
+	
 
 	
 }

@@ -43,7 +43,7 @@ public class InventoryService {
 		return categoryRepository.findAll();
 	}
 
-	public Category createNewCategory(@Valid Category category) {
+	public Category createNewCategory(Category category) {
 		return categoryRepository.save(category);
 	}
 
@@ -60,6 +60,11 @@ public class InventoryService {
 			listInProduct.add(cat.getName());
 		}
 		return categoryRepository.findByNameNotIn(listInProduct);
+	}
+
+	public List<Product> getAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 		
 	

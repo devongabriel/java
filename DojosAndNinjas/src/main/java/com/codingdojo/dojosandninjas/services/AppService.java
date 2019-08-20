@@ -38,7 +38,7 @@ public class AppService {
 		if(dojo.isPresent()) {
 			return dojo.get();
 		} else {
-		return null;
+			return null;
 		}
 	}
 }

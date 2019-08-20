@@ -46,7 +46,7 @@
 		<form:label path="name">Name</form:label>
 		<form:input path="name" class="form-control col-6 mb-2" />
 	</p>
-	<input type="submit" value="creat dojo" class="btn btn-success" />
+	<input type="submit" value="create dojo" class="btn btn-success" />
 	</form:form>
 </div>
 </div>
